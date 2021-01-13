@@ -26,7 +26,7 @@ export default {
     .then(res => res.json())
     .then(countries => this.countries = countries)
 
-    eventBus.$on('country-selected', (country) => {
+    eventBus.$on('selected-country', (country) => {
       this.selectedCountry = country;
     })
   },
@@ -39,6 +39,7 @@ export default {
 
 <style>
 #app {
+  display: flex;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
